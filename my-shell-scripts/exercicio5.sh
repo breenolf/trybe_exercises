@@ -14,5 +14,3 @@ else
 fi
 
 ls -l $CAMINHO
-
-# /home/breno/Documentos/TRYBE/vscode/pasta
