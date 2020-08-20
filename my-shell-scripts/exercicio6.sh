@@ -1,15 +1,13 @@
 #!/bin/bash
 
-read -p "Digite um caminho de arquivo ou diretório: " CAMINHO
-
-if [ -d "$CAMINHO" ]
+if [ -d "$1" ]
  then
     echo "É UM DIRETÓRIO"
-elif [ -f "$CAMINHO" ]
+elif [ -f "$1" ]
  then
     echo "É UM ARQUIVO COMUM"
 else
     echo "É QUALQUER OUTRO TIPO DE ARQUIVO" 
 fi
 
-ls -l $CAMINHO
+ls -l $1
