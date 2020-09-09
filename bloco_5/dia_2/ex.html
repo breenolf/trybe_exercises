@@ -62,9 +62,9 @@
       title.innerText = "Exercício 5.2 - JavaScript DOM";
       document.body.appendChild(title);
 
-      let box = document.createElement('div');
-      box.className = "main-content";
-      document.body.appendChild(box);
+      let boxDad = document.createElement('div');
+      boxDad.className = "main-content";
+      document.body.appendChild(boxDad);
 
       let boxChild = document.createElement('div');
       boxChild.className = "center-content";
@@ -74,7 +74,9 @@
       paragraph.innerText = "Oh My Dog!";
       document.querySelector('.center-content').appendChild(paragraph);
 
-      
+      let boxChild2 = document.createElement('div');
+      boxChild2.className = "left-content";
+      document.querySelector(".main-content").appendChild(boxChild2);
 
     </script>
   </body>
