@@ -107,6 +107,7 @@
 
         let itemsList = document.createElement("li");
         itemsList.innerText = value;
+        itemsList.className = "items-list";
 
         list.appendChild(itemsList);
       }
@@ -124,6 +125,18 @@
       boxDad.removeChild(boxChild2);
 
       boxChild3.style.marginRight = "auto";
+
+      document.querySelector('.center-content').parentNode.style.backgroundColor = "green";
+
+      let itemsSearch = document.querySelectorAll(".items-list");
+
+      for (let i in itemsSearch) {
+        let item = itemsSearch[i];
+
+        if (item.innerText == 'nove' || item.innerText == 'dez') {
+          list.removeChild(item);
+        }
+      }
 
     </script>
   </body>
