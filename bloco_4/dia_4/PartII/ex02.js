@@ -2,7 +2,7 @@ function indiceDeMaiorValor(array) {
     let maiorIndice = 0;
     let valor = 0;
  
-    for (let i = 0; i < array.length; i += 1) {
+    for (let i in array) {
          
         if (array[i] > valor) {
             maiorIndice = i;
