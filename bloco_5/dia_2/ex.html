@@ -71,7 +71,7 @@
       document.querySelector(".main-content").appendChild(boxChild);
 
       let paragraph = document.createElement('p');
-      paragraph.innerText = "Oh My Dog!";
+      paragraph.innerText = "Through the Fire and Flames";
       document.querySelector('.center-content').appendChild(paragraph);
 
       let boxChild2 = document.createElement('div');
@@ -81,6 +81,11 @@
       let boxChild3 = document.createElement('div');
       boxChild3.className = "right-content";
       document.querySelector(".main-content").appendChild(boxChild3);
+
+      let image = document.createElement('img');
+      image.src = "https://picsum.photos/200";
+      image.className = "small-image";
+      document.querySelector('.left-content').appendChild(image);
 
     </script>
   </body>
