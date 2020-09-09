@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+      let title = document.createElement("h1");
+      title.innerText = "Exercício 5.2 - JavaScript DOM";
+      document.body.appendChild(title);
+
+      let boxDad = document.createElement("div");
+      boxDad.className = "main-content";
+      document.body.appendChild(boxDad);
+
+      let boxChild = document.createElement("div");
+      boxChild.className = "center-content";
+      document.querySelector(".main-content").appendChild(boxChild);
+
+      let paragraph = document.createElement("p");
+      paragraph.innerText = "Through the Fire and Flames";
+      document.querySelector(".center-content").appendChild(paragraph);
+
+      let boxChild2 = document.createElement("div");
+      boxChild2.className = "left-content";
+      document.querySelector(".main-content").appendChild(boxChild2);
+
+      let boxChild3 = document.createElement("div");
+      boxChild3.className = "right-content";
+      document.querySelector(".main-content").appendChild(boxChild3);
+
+      let image = document.createElement("img");
+      image.src = "https://picsum.photos/200";
+      image.className = "small-image";
+      document.querySelector(".left-content").appendChild(image);
+
+      let listNoOrder = [
+        "um",
+        "dois",
+        "três",
+        "quatro",
+        "cinco",
+        "seis",
+        "sete",
+        "oito",
+        "nove",
+        "dez",
+      ];
+
+      let list = document.createElement("ul");
+
+      for (let i in listNoOrder) {
+        let value = listNoOrder[i];
+
+        let itemsList = document.createElement("li");
+        itemsList.innerText = value;
+        itemsList.className = "items-list";
+
+        list.appendChild(itemsList);
+      }
+
+      document.querySelector(".right-content").appendChild(list);
+
+      for (let i = 0; i < 3; i += 1) {
+        let subtitle = document.createElement("h3");
+        subtitle.className = "description";
+        document.querySelector(".main-content").appendChild(subtitle);
+      }
+
+      title.className = "title";
+
+      boxDad.removeChild(boxChild2);
+
+      boxChild3.style.marginRight = "auto";
+
+      document.querySelector('.center-content').parentNode.style.backgroundColor = "green";
+
+      let itemsSearch = document.querySelectorAll(".items-list");
+
+      for (let i in itemsSearch) {
+        let item = itemsSearch[i];
+
+        if (item.innerText == 'nove' || item.innerText == 'dez') {
+          list.removeChild(item);
+        }
+      }
+
+    </script>
+  </body>
+</html>
