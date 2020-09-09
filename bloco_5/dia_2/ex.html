@@ -87,6 +87,21 @@
       image.className = "small-image";
       document.querySelector('.left-content').appendChild(image);
 
+      let listNoOrder = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+      let list = document.createElement('ul');
+
+      for (let i in listNoOrder) {
+        let value = listNoOrder[i];
+        
+        let itemsList = document.createElement('li');
+        itemsList.innerText = value;
+        
+        list.appendChild(itemsList);
+      }
+
+      document.querySelector('.right-content').appendChild(list);
+
     </script>
   </body>
 </html>
