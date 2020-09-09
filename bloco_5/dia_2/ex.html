@@ -62,52 +62,64 @@
       title.innerText = "Exercício 5.2 - JavaScript DOM";
       document.body.appendChild(title);
 
-      let boxDad = document.createElement('div');
+      let boxDad = document.createElement("div");
       boxDad.className = "main-content";
       document.body.appendChild(boxDad);
 
-      let boxChild = document.createElement('div');
+      let boxChild = document.createElement("div");
       boxChild.className = "center-content";
       document.querySelector(".main-content").appendChild(boxChild);
 
-      let paragraph = document.createElement('p');
+      let paragraph = document.createElement("p");
       paragraph.innerText = "Through the Fire and Flames";
-      document.querySelector('.center-content').appendChild(paragraph);
+      document.querySelector(".center-content").appendChild(paragraph);
 
-      let boxChild2 = document.createElement('div');
+      let boxChild2 = document.createElement("div");
       boxChild2.className = "left-content";
       document.querySelector(".main-content").appendChild(boxChild2);
 
-      let boxChild3 = document.createElement('div');
+      let boxChild3 = document.createElement("div");
       boxChild3.className = "right-content";
       document.querySelector(".main-content").appendChild(boxChild3);
 
-      let image = document.createElement('img');
+      let image = document.createElement("img");
       image.src = "https://picsum.photos/200";
       image.className = "small-image";
-      document.querySelector('.left-content').appendChild(image);
+      document.querySelector(".left-content").appendChild(image);
 
-      let listNoOrder = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      let listNoOrder = [
+        "um",
+        "dois",
+        "três",
+        "quatro",
+        "cinco",
+        "seis",
+        "sete",
+        "oito",
+        "nove",
+        "dez",
+      ];
 
-      let list = document.createElement('ul');
+      let list = document.createElement("ul");
 
       for (let i in listNoOrder) {
         let value = listNoOrder[i];
-        
-        let itemsList = document.createElement('li');
+
+        let itemsList = document.createElement("li");
         itemsList.innerText = value;
-        
+
         list.appendChild(itemsList);
       }
 
-      document.querySelector('.right-content').appendChild(list);
+      document.querySelector(".right-content").appendChild(list);
 
       for (let i = 0; i < 3; i += 1) {
-        let subtitle = document.createElement('h3');
+        let subtitle = document.createElement("h3");
+        subtitle.className = "description";
         document.querySelector(".main-content").appendChild(subtitle);
       }
 
-      
+      title.className = "title";
 
     </script>
   </body>
